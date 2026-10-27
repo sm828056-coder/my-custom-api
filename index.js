@@ -39,3 +39,6 @@ app.get("/api/uuid", (req, res) => {
     uuid: crypto.randomUUID()
   });
 });
+app.get("/api/status", (req, res) => {
+  res.json({ status: "online" });
+});
