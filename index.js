@@ -33,3 +33,9 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`API running on port ${PORT}`);
 });
+app.get("/api/uuid", (req, res) => {
+  res.json({
+    success: true,
+    uuid: crypto.randomUUID()
+  });
+});
